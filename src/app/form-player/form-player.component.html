@@ -1,0 +1,11 @@
+<h2>Choice name player</h2>
+
+<form class="form"  #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+    <label for="Player1">Name player 1 :</label>
+    <input name="Player1" id="Player1" ngModel required #first="ngModel">
+
+    <label for="Player2">Name player 2 :</label>
+    <input name="Player2" id="Player2" ngModel required #second="ngModel">
+
+    <button type="submit">Send</button>
+</form>

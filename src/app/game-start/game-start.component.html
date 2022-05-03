@@ -1,0 +1,33 @@
+<div *ngIf="!nextPlayer; then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock>
+    <div class="container">
+        <div class="row center">
+            <h1>
+                {{Data[0].getNamePlayer()}}, score : {{score}}
+            </h1>  
+        </div>
+    </div>
+    <div *ngIf="!gameStart">
+      <button (click)="restartGame()" >next Player</button>
+    </div>
+  </ng-template>
+  <ng-template #elseBlock>
+    <div class="container">
+      <div class="row center">
+          <h1>
+              {{Data[1].getNamePlayer()}}, score : {{score}}
+          </h1>  
+      </div>
+    </div>
+  <div *ngIf="!gameStart">
+    <button (click)="endGame()" >End Game</button>
+  </div>
+  </ng-template>
+ 
+<div class="container">
+  <div class="row center" *ngFor="let obj of matrix; let i = index;">
+    <div class="col-sm-auto" *ngFor="let keyValues of obj; let j = index;">
+      <div class="default" id="{{'card' + i + '-' + j}}" (click)="check(keyValues,i,j)" (contextmenu)="flag(keyValues, i, j)" ></div>
+    </div>
+  </div>
+</div>
