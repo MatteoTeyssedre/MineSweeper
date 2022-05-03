@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { player } from '../player';
 
 @Component({
   selector: 'app-solo',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./solo.component.scss']
 })
 export class SoloComponent implements OnInit {
+  player1: player = new player("1");
+  gameStart = false;
 
-  constructor() { }
+
+  goHome(){
+    this.router.navigate(['']);
+}
+
+  end(endGame: boolean) {
+    this.gameStart = endGame;
+  }
+
+  constructor (private router:Router) {}
 
   ngOnInit(): void {
   }
 
+  title = 'Demi';
 }

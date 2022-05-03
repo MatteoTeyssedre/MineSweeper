@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { player } from '../player';
 
 @Component({
@@ -8,8 +9,11 @@ import { player } from '../player';
 })
 export class DuoComponent implements OnInit {
 
-  constructor() { }
+  constructor (private router:Router) {}
 
+  goHome(){
+      this.router.navigate(['']);
+  }
   ngOnInit(): void {
   }
 

@@ -1,5 +1,6 @@
+<button (click)="goHome()" class="btn btn-primary">back</button>
 <div *ngIf="!gameStart; then thenBlock else elseBlock"></div>
 <ng-template #thenBlock>
 <app-form-player (sendRequestToFather)="sendData($event)"></app-form-player>
 </ng-template>
-<ng-template #elseBlock><app-game-start (sendEndGameToFather)="end($event)" [Data]="[player1,player2]"></app-game-start></ng-template>
+<ng-template #elseBlock><app-game-start [Solo]="false" (sendEndGameToFather)="end($event)" [Data]="[player1,player2]"></app-game-start></ng-template>

@@ -35,6 +35,9 @@ export class GameStartComponent implements OnInit {
 
   @Input()
   Data: player[] = [];
+  
+  @Input()
+  Solo!: boolean;
 
   @Output()
   sendEndGameToFather = new EventEmitter();
@@ -73,19 +76,30 @@ export class GameStartComponent implements OnInit {
     this.returnTheEndToFather();
   }
 
+  endGameSolo() {
+    alert(`score: ${this.Data[0].getScorePlayer()}`);
+    this.returnTheEndToFather();
+  }
+
   restartGame() {
     this.score = 0;
     this.interval = 0;
     this.startGame();
     this.matrix = this.matrixService.createMatrix();
-    this.nextPlayer = true;
+    if(!this.Solo){
+      this.nextPlayer = true;
+    }
   }
 
   looseGame() {
     this.showAll();
     this.pauseTimer();
     this.score = 99999;
-    this.Data[0].setScorePlayer(999999);
+    if ( !this.nextPlayer ){
+      this.Data[0].setScorePlayer(999999);
+    }else{
+      this.Data[1].setScorePlayer(999999);
+    }
     this.gameStart = 0;
     alert("Looser !!!");
   }
@@ -93,7 +107,11 @@ export class GameStartComponent implements OnInit {
   winGame() {
     this.showAll();
     this.pauseTimer();
-    this.Data[0].setScorePlayer(this.score);
+    if ( !this.nextPlayer ){
+      this.Data[0].setScorePlayer(this.score);
+    }else{
+      this.Data[1].setScorePlayer(this.score);
+    }
     this.gameStart = 0;
   }
   checkWin() {

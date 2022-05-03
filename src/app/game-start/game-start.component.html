@@ -1,29 +1,45 @@
-<div *ngIf="!nextPlayer; then thenBlock else elseBlock"></div>
-  <ng-template #thenBlock>
-    <div class="container">
-        <div class="row center">
-            <h1>
-                {{Data[0].getNamePlayer()}}, score : {{score}}
-            </h1>  
+
+<div *ngIf="Solo; then solo else duo"></div>
+  <ng-template #duo>
+    <div *ngIf="!nextPlayer; then thenBlock else elseBlock"></div>
+      <ng-template #thenBlock>
+        <div class="container">
+            <div class="row center">
+                <h1>
+                    {{Data[0].getNamePlayer()}}, score : {{score}}
+                </h1>  
+            </div>
         </div>
-    </div>
-    <div *ngIf="!gameStart">
-      <button (click)="restartGame()" >next Player</button>
-    </div>
+        <div *ngIf="!gameStart">
+          <button (click)="restartGame()" >next Player</button>
+        </div>
+      </ng-template>
+      <ng-template #elseBlock>
+        <div class="container">
+          <div class="row center">
+              <h1>
+                  {{Data[1].getNamePlayer()}}, score : {{score}}
+              </h1>  
+          </div>
+        </div>
+      <div *ngIf="!gameStart">
+        <button (click)="endGame()" >End Game</button>
+      </div>
+      </ng-template>
   </ng-template>
-  <ng-template #elseBlock>
+  <ng-template #solo>
     <div class="container">
       <div class="row center">
           <h1>
-              {{Data[1].getNamePlayer()}}, score : {{score}}
+              score : {{score}}
           </h1>  
       </div>
     </div>
-  <div *ngIf="!gameStart">
-    <button (click)="endGame()" >End Game</button>
-  </div>
+    <div *ngIf="!gameStart">
+      <button (click)="restartGame()">RestartGame</button>
+    </div>
   </ng-template>
- 
+  
 <div class="container">
   <div class="row center" *ngFor="let obj of matrix; let i = index;">
     <div class="col-sm-auto" *ngFor="let keyValues of obj; let j = index;">
@@ -31,3 +47,6 @@
     </div>
   </div>
 </div>
+
+
+
