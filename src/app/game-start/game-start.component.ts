@@ -89,7 +89,7 @@ export class GameStartComponent implements OnInit {
 
   restartGame() {
     this.score = 0;
-    this.interval = 0;
+    this.pauseTimer();
     this.startGame();
     this.matrix = this.matrixService.createMatrix();
     if(!this.Solo){
@@ -100,11 +100,11 @@ export class GameStartComponent implements OnInit {
   looseGame() {
     this.showAll();
     this.pauseTimer();
-    this.score = 99999;
+    this.score = 8888;
     if ( !this.nextPlayer ){
-      this.Data[0].setScorePlayer(999999);
+      this.Data[0].setScorePlayer(this.score);
     }else{
-      this.Data[1].setScorePlayer(999999);
+      this.Data[1].setScorePlayer(this.score);
     }
     this.gameStart = 0;
     alert("Looser !!!");

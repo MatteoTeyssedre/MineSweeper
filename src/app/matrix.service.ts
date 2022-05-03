@@ -18,6 +18,7 @@ export class MatrixService {
 
   createMatrix() {
     this.matrix = [];
+    this.coordMine = [];
     for (let i = 0; i < 18; i++) {
       this.matrix[i] = new Array(18);
     }
