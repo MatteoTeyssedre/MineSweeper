@@ -1,0 +1,83 @@
+.card{
+    cursor: pointer;
+}
+.flag{
+    background-image: url('../../assets/flagged.png') !important;
+}
+
+.zero{
+    background-image: url('../../assets/0.png') !important;
+}
+.one
+{
+    background-image: url('../../assets/1.png') !important;
+}
+.two{
+    background-image: url('../../assets/2.png') !important;
+}
+.three{
+    background-image: url('../../assets/3.png') !important;
+}
+.four{
+    background-image: url('../../assets/4.png') !important;
+}
+.five{
+    background-image: url('../../assets/5.png') !important;
+}
+.six{
+    background-image: url('../../assets/6.png') !important;
+}
+.seven{
+    background-image: url('../../assets/7.png') !important;
+}
+.eight{
+    background-image: url('../../assets/8.png') !important;
+}
+.mine{
+    background-image: url('../../assets/mine.jpg') !important;
+}
+.default{
+    background-image: url('../../assets/9.png');
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+.row>*{
+    padding: 0px !important;
+    //margin: 0px !important;
+}
+.row{
+    width: 540px;
+}
+
+.conteneur_titre {
+    border-style: ridge;
+    border-color: white;
+    border-width: 1.5mm;
+    margin-bottom: 4vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 150px;
+}
+
+
+.titre {
+    margin-top: 3%;
+}
+
+.panneau {
+    border-style: ridge;
+    border-color: white;
+    border-width: 1.5mm;
+    margin-bottom: 4vw;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+}
+
+.score {
+    margin-top: 8%;
+}
+
+.jeu {
+    margin-top: -60px;
+}
+

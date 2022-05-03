@@ -1,0 +1,45 @@
+body{
+    height: 100vh;
+    -webkit-animation: colorchange 20s infinite;
+    animation: colorchange 20s infinite;
+    /*background-image: linear-gradient(to right, #1c87c9, #8ebf42);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;*/
+    //background-color: #34495e;
+}
+
+@-webkit-keyframes colorchange {
+    0% {
+        background: #EBF5FB;
+    }
+    25% {
+        background: #D6EAF8;
+    }
+    50% {
+        background: #AED6F1;
+    }
+    75% {
+        background: #D6EAF8;
+    }
+    100% {
+        background: #EBF5FB;
+    }
+}
+@keyframes colorchange {
+    0% {
+        background: #EBF5FB;
+    }
+    25% {
+        background: #D6EAF8;
+    }
+    50% {
+        background: #AED6F1;
+    }
+    75% {
+         background: #D6EAF8;
+    }
+    100% {
+        background: #EBF5FB;
+    }
+}

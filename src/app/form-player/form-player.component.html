@@ -1,0 +1,24 @@
+<section class="acceuil d-flex w-100 flex-column justify-content-center align-items-center h-100">
+    <div class="container py-10 container-sm justify-content-center align-items-center text-center w-100 h-100">
+        <div class="container py-10 container-sm text-center w-50 h-25">
+            <div class="container py-10 container-sm text-center w-75 h-75 conteneur_titre">
+                <h1 class="text-center titre">Choice name player</h1>
+            </div>
+        </div>
+        <div class="row py-10 container-sm justify-content-center align-items-center text-center w-100 h-50">
+            <div class="panneau col-md-4 col-sm-6 text-center w-25 bg-light h-75">
+
+                <form class="form"  #form="ngForm" (ngSubmit)="onSubmit(form)" novalidate>
+                    <label for="Player1">Name player 1 :</label>
+                    <input name="Player1" id="Player1" class="form-control" ngModel required #first="ngModel">
+                    <br><br>
+                    <label for="Player2">Name player 2 :</label>
+                    <input name="Player2" id="Player2" class="form-control" ngModel required #second="ngModel">
+                    <br><br>
+                    <button type="submit" class="btn-primary">Send</button>
+                </form>
+            
+            </div>
+        </div>
+    </div>
+</section>
