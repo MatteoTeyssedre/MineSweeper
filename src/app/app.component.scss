@@ -1,45 +1,17 @@
 body{
     height: 100vh;
-    -webkit-animation: colorchange 20s infinite;
-    animation: colorchange 20s infinite;
-    /*background-image: linear-gradient(to right, #1c87c9, #8ebf42);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;*/
-    //background-color: #34495e;
-}
-
-@-webkit-keyframes colorchange {
-    0% {
-        background: #EBF5FB;
-    }
-    25% {
-        background: #D6EAF8;
-    }
-    50% {
-        background: #AED6F1;
-    }
-    75% {
-        background: #D6EAF8;
-    }
-    100% {
-        background: #EBF5FB;
-    }
-}
-@keyframes colorchange {
-    0% {
-        background: #EBF5FB;
-    }
-    25% {
-        background: #D6EAF8;
-    }
-    50% {
-        background: #AED6F1;
-    }
-    75% {
-         background: #D6EAF8;
-    }
-    100% {
-        background: #EBF5FB;
-    }
+    /*background: #e2a9e5;
+    background: -moz-linear-gradient(-45deg, 
+    #e2a9e5 15%, #2b94e5 100%);
+    background: -webkit-linear-gradient(-45deg, 
+    #e2a9e5 15%,#2b94e5 100%);
+    background: linear-gradient(-45deg, #e2a9e5
+   15%,#2b94e5 100%);*/
+   background: #7284a8;
+   background: -moz-linear-gradient(-45deg, 
+   #7cdedc 15%, #7284a8 100%);
+   background: -webkit-linear-gradient(-45deg, 
+   #7cdedc 15%,#7284a8 100%);
+   background: linear-gradient(-45deg, #7cdedc
+  15%,#7284a8 100%);
 }

@@ -1,7 +1,7 @@
 <section class="acceuil d-flex w-100 flex-column justify-content-center align-items-center h-100">
   <div class="container py-10 container-sm justify-content-center align-items-center text-center w-100 h-100">
-    <div class="container py-10 container-sm text-center w-50 h-25">
-      <div class="container py-10 container-sm text-center w-50 h-50 conteneur_titre">
+    <div class="container py-10 container-sm text-center w-50 h-25 padding">
+      <div class="container py-10 container-sm text-center w-50 h-50 block box">
         <div *ngIf="Solo; then solotitre else duotitre"></div>
         <ng-template #duotitre>
           <h1 class="text-center titre">Duo Mode</h1>
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="row w-100 h-75">
-      <div class="panneau col-md-4 col-sm-6 text-center w-25 bg-light h-75">
+      <div class="col-md-4 col-sm-6 text-center w-25 h-75 block box">
 
         <div class="row w-100 h-100">
 
@@ -22,36 +22,38 @@
               <div *ngIf="!nextPlayer; then thenBlock else elseBlock"></div>
               <ng-template #thenBlock>
                     <h1>
-                      {{Data[0].getNamePlayer()}}, score : {{score}}
+                      {{Data[0].getNamePlayer()}} <br> score : {{score}}
                     </h1>
+                    <br><br><br>
                 <div *ngIf="!gameStart">
-                  <button (click)="restartGame()" class="btn btn-primary">Next Player</button>
+                  <button (click)="restartGame()" class="btn btn-primary button">Next Player</button>
                 </div>
               </ng-template>
             </div>
             <div class="col-md-4 col-sm-6 text-center w-100 h-25">
               <ng-template #elseBlock>
                     <h1>
-                      {{Data[1].getNamePlayer()}}, score : {{score}}
+                      {{Data[1].getNamePlayer()}} <br> score : {{score}}
                     </h1>
-                <button (click)="endGame()" class="btn btn-primary">End Game</button>
+                    <br><br><br>
+                <button (click)="endGame()" class="btn btn-primary button">End Game</button>
               </ng-template>
             </div>
           </ng-template>
 
           <ng-template #solo>
-            <div class="col-md-4 col-sm-6 text-center w-100 h-25">
+            <div class="col-md-4 col-sm-6 w-100 h-25">
               <h1 class="score">
                 score : {{score}}
               </h1>
             </div>
-            <div class="col-md-4 col-sm-6 text-center h-25 w-100">
-              <button (click)="restartGame()" class="btn btn-primary">Restart Game</button>
+            <div class="col-md-4 col-sm-6 h-25 w-100">
+              <button (click)="restartGame()" class="btn btn-primary button">Restart Game</button>
             </div>
           </ng-template>
           
-          <div class="col-md-4 col-sm-6 text-center w-100 h-25">
-            <button (click)="goHome()" class="btn btn-primary">Back</button>
+          <div class="col-md-4 col-sm-6 w-100 h-25">
+            <button (click)="goHome()" class="btn btn-primary button2">Back</button>
           </div>
 
         </div>
