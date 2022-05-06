@@ -23,6 +23,7 @@
   transition: background-position .7s,box-shadow .4s;
   background-size: 110%;
   font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 .button:hover {
   background-position: 0% 30%;
@@ -98,6 +99,7 @@
   transition: background-position .7s,box-shadow .4s;
   background-size: 110%;
   font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
 }
 .button2:hover {
   background-position: 0% 30%;
@@ -157,6 +159,7 @@
 }
 
 .block {
+  text-transform: uppercase;
   transform: translatey(0px);
   animation: float 6s ease-in-out infinite;
 }

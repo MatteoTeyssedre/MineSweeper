@@ -1,17 +1,22 @@
-body{
-    height: 100vh;
-    /*background: #e2a9e5;
-    background: -moz-linear-gradient(-45deg, 
-    #e2a9e5 15%, #2b94e5 100%);
-    background: -webkit-linear-gradient(-45deg, 
-    #e2a9e5 15%,#2b94e5 100%);
-    background: linear-gradient(-45deg, #e2a9e5
+body {
+  height: 100vh;
+  /*background: #e2a9e5;
+  background: -moz-linear-gradient(-45deg, 
+  #e2a9e5 15%, #2b94e5 100%);
+  background: -webkit-linear-gradient(-45deg, 
+  #e2a9e5 15%,#2b94e5 100%);
+  background: linear-gradient(-45deg, #e2a9e5
    15%,#2b94e5 100%);*/
-   background: #7284a8;
+   /*background: #7284a8;
    background: -moz-linear-gradient(-45deg, 
    #7cdedc 15%, #7284a8 100%);
    background: -webkit-linear-gradient(-45deg, 
    #7cdedc 15%,#7284a8 100%);
    background: linear-gradient(-45deg, #7cdedc
   15%,#7284a8 100%);
+  background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+  #0000ff, #00ff00,#ffff00, #ff0000);*/
+  background: linear-gradient(45deg, #7284a8, #405989, #77cbe4,#43a38d, #7cdedc, #7284a8, #405989, #77cbe4,#43a38d, #7cdedc);
+  font-family :Georgia, 'Times New Roman', Times, serif;
+  animation: steam 20s linear infinite;
 }
