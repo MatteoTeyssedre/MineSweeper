@@ -235,7 +235,6 @@ export class GameStartComponent implements OnInit {
 
   flag(input: number, i: number, j: number) {
     const flag = document.getElementById(`card${i}-${j}`);
-    console.table(this.matrixService.getCoordMine());
     if (flag) {
       if (flag.classList.contains("flag")) {
         flag.classList.remove("flag");
