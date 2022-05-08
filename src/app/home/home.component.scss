@@ -1,0 +1,245 @@
+.acceuil {
+    height: 100vh;
+}
+
+.titre {
+    margin-top: 4%;
+}
+
+.button {
+  border: none;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+  padding: 20px 50px 20px 70px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  position: relative;
+  color: black;
+  outline: none;
+  cursor: pointer;
+  width: 50%;
+  -webkit-transition: background-position .7s,box-shadow .4s;
+  transition: background-position .7s,box-shadow .4s;
+  background-size: 110%;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+.button:hover {
+  background-position: 0% 30%;
+}
+.button:hover:after {
+  right: -40px;
+  -webkit-transition: right .4s,-webkit-transform 30s .2s linear;
+  transition: right .4s,-webkit-transform 30s .2s linear;
+  transition: right .4s,transform 30s .2s linear;
+  transition: right .4s,transform 30s .2s linear,-webkit-transform 30s .2s linear;
+}
+.button:before, .button:after {
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+}
+.button:before {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-size: 30px;
+  left: 25px;
+  top: 11px;
+}
+.button:after {
+  -webkit-transition: right .4s, -webkit-transform .2s;
+  transition: right .4s, -webkit-transform .2s;
+  transition: right .4s, transform .2s;
+  transition: right .4s, transform .2s, -webkit-transform .2s;
+  font-size: 100px;
+  opacity: .3;
+  right: -120px;
+  top: -17px;
+}
+
+.button {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px #E9E3E6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#E9E3E6), to(#ffffff));
+  background: linear-gradient(to bottom, #E9E3E6, #ffffff);
+}
+.button:hover {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px #E9E3E6;
+}
+.button:hover:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.button:hover:before {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.button:after, .button:before {
+  content: "🧑🏻";
+}
+.button b {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.button2 {
+  border: none;
+  border-radius: 4px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.48);
+  overflow: hidden;
+  padding: 20px 50px 20px 70px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  position: relative;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  -webkit-transition: background-position .7s,box-shadow .4s;
+  transition: background-position .7s,box-shadow .4s;
+  background-size: 110%;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+}
+.button2:hover {
+  background-position: 0% 30%;
+}
+.button2:hover:after {
+  right: -40px;
+  -webkit-transition: right .4s,-webkit-transform 30s .2s linear;
+  transition: right .4s,-webkit-transform 30s .2s linear;
+  transition: right .4s,transform 30s .2s linear;
+  transition: right .4s,transform 30s .2s linear,-webkit-transform 30s .2s linear;
+}
+.button2:before, .button2:after {
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+}
+.button2:before {
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  font-size: 30px;
+  left: 25px;
+  top: 11px;
+}
+.button2:after {
+  -webkit-transition: right .4s, -webkit-transform .2s;
+  transition: right .4s, -webkit-transform .2s;
+  transition: right .4s, transform .2s;
+  transition: right .4s, transform .2s, -webkit-transform .2s;
+  font-size: 100px;
+  opacity: .3;
+  right: -120px;
+  top: -17px;
+}
+
+.button2 {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 10px 0px #474954;
+  background: -webkit-gradient(linear, left top, left bottom, from(#474954), to(#74778a));
+  background: linear-gradient(to bottom, #474954, #74778a);
+}
+.button2:hover {
+  box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.16) inset, 0px 0px 30px 0px #474954;
+}
+.button2:hover:after {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+.button2:hover:before {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+.button2:after, .button2:before {
+  content: "🧑🏻🧑🏻";
+}
+.button2 b {
+  color: #74778a;
+  font-weight: 700;
+}
+
+.block {
+  text-transform: uppercase;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
+}
+
+.box{
+  background: #111845a6;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 2px solid #2a3cad;
+  color: white;
+  border-radius: 50px;
+  margin-bottom: 120px;
+}
+
+.box:before{
+  content: '';
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background: rgba(255,255,255,0.1);
+  transition:0.5s;
+  pointer-events: none;
+}
+
+.box:hover:before{
+  left:-50%;
+  transform: skewX(-5deg);
+}
+
+
+.box .content{
+  position:absolute;
+  top:15px;
+  left:15px;
+  right:15px;
+  bottom:15px;
+  border:1px solid #f0a591;
+  padding:20px;
+  text-align:center;
+  box-shadow: 0 5px 10px rgba(9,0,0,0.5);
+  
+}
+
+
+@keyframes animate {
+  0% {
+  transform:scaleX(0);
+  transform-origin: left;
+  }
+  50%
+  {
+    transform:scaleX(1);
+  transform-origin: left;
+  }
+  50.1%
+  {
+    transform:scaleX(1);
+  transform-origin: right;
+    
+  }
+  
+  100%
+  {
+    transform:scaleX(0);
+  transform-origin: right;
+    
+  }
+} 
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-20px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}

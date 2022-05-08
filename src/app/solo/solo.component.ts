@@ -12,15 +12,12 @@ export class SoloComponent implements OnInit {
   gameStart = false;
 
 
-  goHome(){
-    this.router.navigate(['']);
-}
-
+  
   end(endGame: boolean) {
     this.gameStart = endGame;
   }
 
-  constructor (private router:Router) {}
+  constructor () {}
 
   ngOnInit(): void {
   }

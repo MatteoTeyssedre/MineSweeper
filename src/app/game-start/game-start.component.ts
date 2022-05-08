@@ -5,6 +5,7 @@ import {
   OnInit,
   Output
 } from '@angular/core';
+import { Router } from '@angular/router';
 import { MatrixService } from '../matrix.service';
 import {
   player
@@ -31,7 +32,7 @@ export class GameStartComponent implements OnInit {
   score: number = 0;
   interval: any;
 
-  constructor(private matrixService: MatrixService) {}
+  constructor(private matrixService: MatrixService, private router:Router ) {}
 
   @Input()
   Data: player[] = [];
@@ -49,6 +50,11 @@ export class GameStartComponent implements OnInit {
   ngOnInit(): void {
     this.startGame();
   }
+
+  goHome(){
+    this.router.navigate(['']);
+  }
+
 
   startTimer() {
     this.interval = setInterval(() => {
@@ -83,7 +89,7 @@ export class GameStartComponent implements OnInit {
 
   restartGame() {
     this.score = 0;
-    this.interval = 0;
+    this.pauseTimer();
     this.startGame();
     this.matrix = this.matrixService.createMatrix();
     if(!this.Solo){
@@ -94,11 +100,11 @@ export class GameStartComponent implements OnInit {
   looseGame() {
     this.showAll();
     this.pauseTimer();
-    this.score = 99999;
+    this.score = 8888;
     if ( !this.nextPlayer ){
-      this.Data[0].setScorePlayer(999999);
+      this.Data[0].setScorePlayer(this.score);
     }else{
-      this.Data[1].setScorePlayer(999999);
+      this.Data[1].setScorePlayer(this.score);
     }
     this.gameStart = 0;
     alert("Looser !!!");
@@ -229,7 +235,6 @@ export class GameStartComponent implements OnInit {
 
   flag(input: number, i: number, j: number) {
     const flag = document.getElementById(`card${i}-${j}`);
-    console.table(this.matrixService.getCoordMine());
     if (flag) {
       if (flag.classList.contains("flag")) {
         flag.classList.remove("flag");

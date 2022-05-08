@@ -1,52 +1,76 @@
+<section class="acceuil d-flex w-100 flex-column justify-content-center align-items-center h-100">
+  <div class="container py-10 container-sm justify-content-center align-items-center text-center w-100 h-100">
+    <div class="container py-10 container-sm text-center w-50 h-25 padding">
+      <div class="container py-10 container-sm text-center w-50 h-50 block box">
+        <div *ngIf="Solo; then solotitre else duotitre"></div>
+        <ng-template #duotitre>
+          <h1 class="text-center titre">Duo Mode</h1>
+        </ng-template>
+        <ng-template #solotitre>
+          <h1 class="text-center titre">Solo Mode</h1>
+        </ng-template>
+      </div>
+    </div>
+    <div class="row w-100 h-75">
+      <div class="col-md-4 col-sm-6 text-center w-25 h-75 block box">
 
-<div *ngIf="Solo; then solo else duo"></div>
-  <ng-template #duo>
-    <div *ngIf="!nextPlayer; then thenBlock else elseBlock"></div>
-      <ng-template #thenBlock>
-        <div class="container">
-            <div class="row center">
-                <h1>
-                    {{Data[0].getNamePlayer()}}, score : {{score}}
-                </h1>  
+        <div class="row w-100 h-100">
+
+          <div *ngIf="Solo; then solo else duo"></div>
+          <ng-template #duo>
+            <div class="col-md-4 col-sm-6 text-center w-100 h-25">
+              <div *ngIf="!nextPlayer; then thenBlock else elseBlock"></div>
+              <ng-template #thenBlock>
+                    <h1>
+                      {{Data[0].getNamePlayer()}} <br> score : {{score}}
+                    </h1>
+                    <br><br><br>
+                <div *ngIf="!gameStart">
+                  <button (click)="restartGame()" class="btn btn-primary button4">Next Player</button>
+                </div>
+              </ng-template>
             </div>
+            <div class="col-md-4 col-sm-6 text-center w-100 h-25">
+              <ng-template #elseBlock>
+                    <h1>
+                      {{Data[1].getNamePlayer()}} <br> score : {{score}}
+                    </h1>
+                    <br><br><br>
+                <button (click)="endGame()" class="btn btn-primary button3">End Game</button>
+              </ng-template>
+            </div>
+          </ng-template>
+
+          <ng-template #solo>
+            <div class="col-md-4 col-sm-6 w-100 h-25">
+              <h1 class="score">
+                score : {{score}}
+              </h1>
+            </div>
+            <div class="col-md-4 col-sm-6 h-25 w-100">
+              <button (click)="restartGame()" class="btn btn-primary button">Restart Game</button>
+            </div>
+          </ng-template>
+          
+          <div class="col-md-4 col-sm-6 w-100 h-25">
+            <button (click)="goHome()" class="btn btn-primary button2">Back</button>
+          </div>
+
         </div>
-        <div *ngIf="!gameStart">
-          <button (click)="restartGame()" >next Player</button>
-        </div>
-      </ng-template>
-      <ng-template #elseBlock>
-        <div class="container">
-          <div class="row center">
-              <h1>
-                  {{Data[1].getNamePlayer()}}, score : {{score}}
-              </h1>  
+      </div>
+      <div class="jeu col-md-4 col-sm-6 text-center w-75">
+
+        <div class="container d-flex w-100 flex-column justify-content-center align-items-center minesweeper">
+          <div class="row center" *ngFor="let obj of matrix; let i = index;">
+            <div class="col-sm-auto" *ngFor="let keyValues of obj; let j = index;">
+              <div class="default" id="{{'card' + i + '-' + j}}" (click)="check(keyValues,i,j)"
+                (contextmenu)="flag(keyValues, i, j)"></div>
+            </div>
           </div>
         </div>
-      <div *ngIf="!gameStart">
-        <button (click)="endGame()" >End Game</button>
+
       </div>
-      </ng-template>
-  </ng-template>
-  <ng-template #solo>
-    <div class="container">
-      <div class="row center">
-          <h1>
-              score : {{score}}
-          </h1>  
-      </div>
-    </div>
-    <div *ngIf="!gameStart">
-      <button (click)="restartGame()">RestartGame</button>
-    </div>
-  </ng-template>
-  
-<div class="container">
-  <div class="row center" *ngFor="let obj of matrix; let i = index;">
-    <div class="col-sm-auto" *ngFor="let keyValues of obj; let j = index;">
-      <div class="default" id="{{'card' + i + '-' + j}}" (click)="check(keyValues,i,j)" (contextmenu)="flag(keyValues, i, j)" ></div>
     </div>
   </div>
-</div>
 
-
-
+</section>
