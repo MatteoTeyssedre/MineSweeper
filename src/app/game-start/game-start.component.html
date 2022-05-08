@@ -36,7 +36,9 @@
                       {{Data[1].getNamePlayer()}} <br> score : {{score}}
                     </h1>
                     <br><br><br>
-                <button (click)="endGame()" class="btn btn-primary button3">End Game</button>
+                    <div *ngIf="!gameStart">
+                      <button (click)="endGame()" class="btn btn-primary button3">End Game</button>
+                    </div>
               </ng-template>
             </div>
           </ng-template>

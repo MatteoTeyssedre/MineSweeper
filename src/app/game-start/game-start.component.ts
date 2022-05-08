@@ -117,8 +117,8 @@ export class GameStartComponent implements OnInit {
       this.Data[0].setScorePlayer(this.score);
     }else{
       this.Data[1].setScorePlayer(this.score);
+      this.endGame();
     }
-    this.gameStart = 0;
   }
   checkWin() {
     let win = true;
