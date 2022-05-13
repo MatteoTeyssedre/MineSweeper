@@ -116,7 +116,7 @@ export class GameStartComponent implements OnInit {
     this.pauseTimer();
     if ( !this.nextPlayer ){
       this.Data[0].setScorePlayer(this.score);
-
+      this.gameStart = 0;
     }else{
       this.Data[1].setScorePlayer(this.score);
       this.endGame();
